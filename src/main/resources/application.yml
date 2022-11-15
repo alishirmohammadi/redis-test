@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@192.168.91.171:1521:infratest
+    username: wantolan
+    password: wantolan
+  jpa:
+    hibernate:
+      ddl-auto: update
+  cache:
+    type: redis
+  redis:
+    url: redis://localhost:6379
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL:
+          DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
